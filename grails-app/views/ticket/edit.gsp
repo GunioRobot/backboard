@@ -10,14 +10,14 @@
 <script type="text/javascript">
 $(function(){
     $("#update").click(function(){
-        var id = $("#tid").val();
+        var id = $("#id").val();
         $.ajax({
-            method : 'post',
-            action: 'update',
+            type : 'post',
+            url: 'update',
             data:{
                 id : id,
                 version : $("#version").val(),
-                title: $("#title").val(),
+                title: $("#editTitle").val(),
                 content: $("#content").val(),
                 type:$("#type").val(),
                 status:$("#status").val()
@@ -25,7 +25,7 @@ $(function(){
             success: function(data) {
                 $("#detail").load('show?id=' + id);
             },
-            error : function() {
+            error : function(data) {
             }
         });
         return false;
@@ -44,8 +44,8 @@ $(function(){
                 <g:renderErrors bean="${ticketInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form method="post" id="ticketForm">
-                <g:hiddenField name="id" id="tid" value="${ticketInstance?.id}" />
+            <g:form method="post">
+                <g:hiddenField name="id" value="${ticketInstance?.id}" />
                 <g:hiddenField name="version" id="version" value="${ticketInstance?.version}" />
                 <div class="dialog">
                     <table>
@@ -56,7 +56,7 @@ $(function(){
                                   <label for="title"><g:message code="ticket.title.label" default="Title" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: ticketInstance, field: 'title', 'errors')}">
-                                    <g:textField name="title" value="${ticketInstance?.title}" />
+                                    <g:textField name="title" value="${ticketInstance?.title}" id="editTitle"/>
                                 </td>
                             </tr>
                         
