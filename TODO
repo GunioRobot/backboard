@@ -1,0 +1,5 @@
+GET /ticket/list で一覧を取得する
+GET /ticket/{id} で詳細を取得する
+POST /ticket で作成する
+PUT /ticket/{id} で更新する
+DELETE /ticket/{id} で削除する
