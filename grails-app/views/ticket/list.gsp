@@ -27,7 +27,7 @@ $(function(){
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="title"><g:message code="ticket.title.label" default="Title" /></label>
@@ -36,7 +36,7 @@ $(function(){
                                     <g:textField name="title" value="${ticketInstance?.title}" />
                                 </td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>
@@ -54,13 +54,13 @@ $(function(){
                 <table>
                     <thead>
                         <tr>
-                                                
+
                             <g:sortableColumn property="title" title="${message(code: 'ticket.title.label', default: 'Title')}" />
-                        
+
                             <g:sortableColumn property="owner" title="${message(code: 'ticket.owner.label', default: 'Owner')}" />
-                        
+
                             <g:sortableColumn property="type" title="${message(code: 'ticket.type.label', default: 'Type')}" />
-                        
+
                             <g:sortableColumn property="status" title="${message(code: 'ticket.status.label', default: 'Status')}" />
 
                         </tr>
@@ -68,19 +68,19 @@ $(function(){
                     <tbody>
                     <g:each in="${ticketInstanceList}" status="i" var="ticketInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
+
 <%--
                             <td><g:link action="show" id="${ticketInstance.id}">${fieldValue(bean: ticketInstance, field: "id")}</g:link></td>
 ${ticketInstance.id}
 --%>
-                        
+
                             <td><a href="show?id=${ticketInstance.id}" class="show">
                             ${fieldValue(bean: ticketInstance, field: "title")}
                             </a></td>
                             <td>${fieldValue(bean: ticketInstance, field: "owner")}</td>
-                        
+
                             <td>${fieldValue(bean: ticketInstance, field: "type")}</td>
-                        
+
                             <td>${fieldValue(bean: ticketInstance, field: "status")}</td>
                         </tr>
                     </g:each>

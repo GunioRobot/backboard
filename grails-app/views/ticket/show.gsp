@@ -25,56 +25,56 @@ $(function(){
             <div class="dialog">
                 <table>
                     <tbody>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.id.label" default="Id" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "id")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.title.label" default="Title" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "title")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.content.label" default="Content" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "content")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.owner.label" default="Owner" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "owner")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.type.label" default="Type" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "type")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.status.label" default="Status" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: ticketInstance, field: "status")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="ticket.deadline.label" default="Deadline" /></td>
-                            
+
                             <td valign="top" class="value"><g:formatDate date="${ticketInstance?.deadline}" /></td>
-                            
+
                         </tr>
-                    
+
                     </tbody>
                 </table>
             </div>

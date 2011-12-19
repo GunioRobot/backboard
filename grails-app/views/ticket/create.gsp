@@ -27,7 +27,7 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="title"><g:message code="ticket.title.label" default="Title" /></label>
@@ -36,7 +36,7 @@
                                     <g:textField name="title" value="${ticketInstance?.title}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="content"><g:message code="ticket.content.label" default="Content" /></label>
@@ -45,7 +45,7 @@
                                     <g:textField name="content" value="${ticketInstance?.content}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="owner"><g:message code="ticket.owner.label" default="Owner" /></label>
@@ -54,7 +54,7 @@
                                     <g:textField name="owner" value="${ticketInstance?.owner}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="type"><g:message code="ticket.type.label" default="Type" /></label>
@@ -63,7 +63,7 @@
                                     <g:textField name="type" value="${ticketInstance?.type}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="status"><g:message code="ticket.status.label" default="Status" /></label>
@@ -72,7 +72,7 @@
                                     <g:textField name="status" value="${ticketInstance?.status}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="deadline"><g:message code="ticket.deadline.label" default="Deadline" /></label>
@@ -81,7 +81,7 @@
                                     <g:datePicker name="deadline" precision="day" value="${ticketInstance?.deadline}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>

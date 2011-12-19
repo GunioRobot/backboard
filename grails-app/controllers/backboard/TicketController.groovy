@@ -60,7 +60,7 @@ class TicketController {
             if (params.version) {
                 def version = params.version.toLong()
                 if (ticketInstance.version > version) {
-                    
+
                     ticketInstance.errors.rejectValue("version", "default.optimistic.locking.failure", [message(code: 'ticket.label', default: 'Ticket')] as Object[], "Another user has updated this Ticket while you were editing")
                     render(view: "edit", model: [ticketInstance: ticketInstance])
                     return
